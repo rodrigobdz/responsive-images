@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       css: {
-        files: ["css/main.css"],
+        files: ["css/main.css", "index.html"],
         tasks: ["cssmin"]
       }
     },
@@ -32,13 +32,19 @@ module.exports = function(grunt) {
           engine: "im",
           sizes: [
             {
-              /*
-            Change these:
-
-            width: ,
-            suffix: ,
-            quality:
-            */
+              name: "small",
+              width: 320,
+              quality: 20
+            },
+            {
+              name: "medium",
+              width: 640,
+              quality: 40
+            },
+            {
+              name: "large",
+              width: 1024,
+              quality: 60
             }
           ]
         },
@@ -80,7 +86,8 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: "images_src/fixed/*.{gif,jpg,png}",
+            src: "fixed/*.{gif,jpg,png}",
+            cwd: "images_src/",
             dest: "images/"
           }
         ]
@@ -95,6 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-mkdir");
   grunt.registerTask("default", [
+    "cssmin",
     "clean",
     "mkdir",
     "copy",
