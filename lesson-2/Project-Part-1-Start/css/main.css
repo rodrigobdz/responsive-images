@@ -11,6 +11,7 @@ body {
 
 .social-links {
   padding: 1em;
+  border-top: 1px solid lightgray;
 }
 
 .social-links a {
