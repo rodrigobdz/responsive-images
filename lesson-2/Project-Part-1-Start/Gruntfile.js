@@ -8,6 +8,16 @@
 
 module.exports = function(grunt) {
   grunt.initConfig({
+    watch: {
+      options: {
+        livereload: true
+      },
+      css: {
+        files: ["css/main.css"],
+        tasks: ["cssmin"]
+      }
+    },
+
     cssmin: {
       target: {
         files: {
@@ -15,6 +25,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     responsive_images: {
       dev: {
         options: {
@@ -78,6 +89,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks("grunt-responsive-images");
+  grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
