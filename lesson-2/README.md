@@ -8,4 +8,4 @@
 
 ## License
 
-[MIT](LICENSE) © [rodrigobdz](https://rodrigobdz.github.io/).
+[MIT](../LICENSE) © [rodrigobdz](https://rodrigobdz.github.io/).

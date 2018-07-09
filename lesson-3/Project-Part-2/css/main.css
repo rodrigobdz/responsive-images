@@ -1,0 +1,43 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: "zocial", sans-serif;
+}
+
+body {
+  margin: 2em;
+}
+
+.social-links {
+  padding: 1em;
+  border-top: 1px solid lightgray;
+}
+
+.social-links a {
+  margin: 1em;
+}
+
+[class*="zocial-"] {
+  font-size: 2em;
+  text-decoration: none;
+  color: cadetblue;
+}
+
+article {
+  max-width: 50em;
+}
+
+article,
+h1 {
+  margin: 0 auto;
+}
+
+h1,
+.social-links {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
